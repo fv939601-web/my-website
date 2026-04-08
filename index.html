@@ -5,37 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
+body{
 margin:0;
 font-family:Arial;
 color:white;
 text-align:center;
-background: linear-gradient(270deg, #ff6a00, #ee0979);
+background: linear-gradient(270deg,#ff416c,#ff4b2b);
 background-size:400% 400%;
-animation:bg 10s ease infinite;
-transition:0.5s;
+animation:bg 8s ease infinite;
 }
 
-.dark {
-background:#111;
-color:#fff;
-}
-
-@keyframes bg {
+@keyframes bg{
 0%{background-position:0%}
 50%{background-position:100%}
 100%{background-position:0%}
 }
 
 /* NAV */
-.nav {
+.nav{
 background:#00000070;
 padding:15px;
 position:sticky;
 top:0;
 }
 
-.nav a {
+.nav a{
 color:white;
 margin:10px;
 text-decoration:none;
@@ -43,15 +37,15 @@ font-weight:bold;
 }
 
 /* PROFILE */
-.profile img {
-width:140px;
+.profile img{
+width:150px;
 border-radius:50%;
 border:3px solid white;
 margin-top:30px;
 }
 
 /* BUTTON */
-button {
+button{
 padding:10px 20px;
 border:none;
 border-radius:20px;
@@ -61,21 +55,21 @@ font-size:16px;
 transition:0.3s;
 }
 
-button:hover {
+button:hover{
 transform:scale(1.1);
 }
 
 /* SECTION */
-.section {
+.section{
 padding:40px;
 }
 
 /* WHATSAPP FLOAT */
-.whatsapp {
+.whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
-background:#25D366;
+background:green;
 color:white;
 padding:15px;
 border-radius:50%;
@@ -83,36 +77,35 @@ font-size:20px;
 text-decoration:none;
 }
 </style>
-
-<script>
-function toggleMode(){
-document.body.classList.toggle("dark");
-}
-</script>
-
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <div class="nav">
 <a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
-<button onclick="toggleMode()">🌙</button>
 </div>
 
-<!-- HOME -->
+<!-- PROFILE -->
 <div class="profile">
-<img src="https://i.imgur.com/4M34h12.png">
+<img src="profile.jpg">
 <h1>🔥 Fayaz Khan</h1>
 <p>😎 Welcome to my official website</p>
 
-<button onclick="window.open('https://www.instagram.com/invites/contact/?igsh=om55jy3ktmu3&utm_content=ft4nv6n')">Instagram 😍</button>
+<a href="https://www.instagram.com/johnson.lee.3367/" target="_blank">
+<button>Instagram 😍</button>
+</a>
 
-<button onclick="window.open('https://www.tiktok.com/@real.cricket5091')">TikTok 🎵</button>
+<a href="https://www.tiktok.com/@real.cricket5091" target="_blank">
+<button>TikTok 🎵</button>
+</a>
 
-<button onclick="window.open('https://wa.me/923410515357')">WhatsApp 💬</button>
+<a href="https://wa.me/923410515357" target="_blank">
+<button>WhatsApp 💬</button>
+</a>
+
 </div>
 
 <!-- ABOUT -->
@@ -127,11 +120,14 @@ Learning web development 💻🔥</p>
 <div class="section" id="contact">
 <h2>Contact Me 📞</h2>
 <p>Click below to chat on WhatsApp 👇</p>
-<button onclick="window.open('https://wa.me/923410515357')">Chat Now 💬</button>
+
+<a href="https://wa.me/923410515357" target="_blank">
+<button>Chat Now 💬</button>
+</a>
 </div>
 
 <!-- FLOAT BUTTON -->
-<a class="whatsapp" href="https://wa.me/923410515357">💬</a>
+<a href="https://wa.me/923410515357" class="whatsapp">💬</a>
 
 </body>
 </html>
