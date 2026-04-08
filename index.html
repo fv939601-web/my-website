@@ -1,58 +1,149 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Aayan Website</title>
+  <title>Aayan Pro Website</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #667eea, #764ba2);
       font-family: Arial;
-      text-align: center;
       color: white;
+      text-align: center;
+
+      background: linear-gradient(270deg, #667eea, #764ba2, #ff6a00);
+      background-size: 600% 600%;
+      animation: bg 10s ease infinite;
     }
 
+    @keyframes bg {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    /* NAVBAR */
+    .nav {
+      background: rgba(0,0,0,0.4);
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+    }
+
+    .nav a {
+      color: white;
+      margin: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav a:hover {
+      color: yellow;
+    }
+
+    /* MAIN BOX */
     .box {
       margin-top: 120px;
+      padding: 20px;
+    }
+
+    img {
+      width: 140px;
+      border-radius: 50%;
+      border: 3px solid white;
     }
 
     h1 {
-      font-size: 45px;
+      font-size: 40px;
     }
 
     p {
-      font-size: 20px;
+      font-size: 18px;
     }
 
     button {
       padding: 12px 25px;
-      font-size: 18px;
       border: none;
       border-radius: 25px;
+      margin: 10px;
+      cursor: pointer;
+      font-size: 16px;
       background: white;
       color: #764ba2;
-      cursor: pointer;
-      margin-top: 20px;
     }
 
     button:hover {
       background: black;
       color: white;
     }
+
+    /* SECTIONS */
+    .section {
+      margin-top: 80px;
+      padding: 30px;
+    }
+
+    /* FOOTER */
+    .footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: rgba(0,0,0,0.4);
+      font-size: 14px;
+    }
   </style>
 </head>
 
 <body>
 
-<div class="box">
-  <h1>🔥 Hello Aayan 🔥</h1>
-  <p>My first website is live 🚀</p>
+  <!-- NAVBAR -->
+  <div class="nav">
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-  <button onclick="alert('Welcome Aayan 😎🔥')">
-    Click Me
-  </button>
-</div>
+  <!-- HOME -->
+  <div class="box">
+    <img src="https://i.imgur.com/4M34hi2.png">
+
+    <h1>🔥 Hello Aayan</h1>
+    <p>My Ultimate Website is live 🚀</p>
+
+    <button onclick="alert('Welcome Aayan 😎🔥')">Click Me</button>
+
+    <br>
+
+    <a href="https://instagram.com" target="_blank">
+      <button>Instagram 😍</button>
+    </a>
+
+    <a href="https://tiktok.com" target="_blank">
+      <button>TikTok 🎵</button>
+    </a>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="section" id="about">
+    <h1>About Me 👤</h1>
+    <p>Hello! I'm Aayan. I love coding 💻 and making cool websites 🔥</p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="section" id="contact">
+    <h1>Contact Me 📞</h1>
+    <p>Click below to chat on WhatsApp 👇</p>
+
+    <a href="https://wa.me/923001234567" target="_blank">
+      <button>WhatsApp 💬</button>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Made by Aayan 💻🔥 | All Rights Reserved
+  </div>
 
 </body>
 </html>
