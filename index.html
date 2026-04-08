@@ -13,6 +13,7 @@ body {
   background:black;
 }
 
+/* PROFILE */
 .profile-img {
   width:150px;
   height:150px;
@@ -21,6 +22,13 @@ body {
   margin-top:30px;
 }
 
+/* NAME GLOW */
+#name {
+  font-size:32px;
+  text-shadow: 0 0 10px white, 0 0 20px orange, 0 0 30px orange;
+}
+
+/* BUTTON */
 button {
   padding:12px 25px;
   border:none;
@@ -42,10 +50,12 @@ button:hover {
   box-shadow: 0 0 20px orange;
 }
 
+/* SECTION */
 .section {
   padding:30px;
 }
 
+/* WHATSAPP FLOAT */
 .whatsapp {
   position:fixed;
   bottom:20px;
@@ -58,6 +68,7 @@ button:hover {
   text-decoration:none;
 }
 
+/* BACKGROUND CANVAS */
 canvas {
   position:fixed;
   top:0;
@@ -76,11 +87,12 @@ canvas {
 <h1 id="name"></h1>
 <p>🔥 Welcome to my official website</p>
 
-<a href="https://instagram.com/" target="_blank">
+<!-- SOCIAL BUTTONS -->
+<a href="https://instagram.com/yourusername" target="_blank">
   <button>Instagram 😍</button>
 </a>
 
-<a href="https://tiktok.com/" target="_blank">
+<a href="https://tiktok.com/@yourusername" target="_blank">
   <button>TikTok 🎵</button>
 </a>
 
@@ -92,24 +104,29 @@ canvas {
 
 <br>
 
+<!-- MUSIC BUTTON -->
 <button onclick="playMusic()">Play Music 🎵</button>
 
+<!-- ABOUT -->
 <div class="section">
   <h2>😎 About Me</h2>
   <p>I am Fayaz Khan 👑</p>
   <p>I love cricket 🏏 and social media 📱</p>
 </div>
 
+<!-- FLOAT BUTTON -->
 <a href="https://wa.me/923410515357" class="whatsapp">💬</a>
 
+<!-- BACKGROUND -->
 <canvas id="bg"></canvas>
 
+<!-- AUDIO -->
 <audio id="music" loop>
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
 </audio>
 
 <script>
-// typing
+// TYPING EFFECT
 let text = "😎 Fayaz Khan";
 let i = 0;
 
@@ -122,12 +139,12 @@ function typing() {
 }
 typing();
 
-// music
+// MUSIC
 function playMusic() {
   document.getElementById("music").play();
 }
 
-// particles
+// PARTICLES BACKGROUND
 const canvas = document.getElementById("bg");
 const ctx = canvas.getContext("2d");
 
