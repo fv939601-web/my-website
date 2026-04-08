@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Aayan Pro Website</title>
-
+  <title>Aayan Ultra Pro Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial;
@@ -30,6 +33,7 @@
       position: fixed;
       width: 100%;
       top: 0;
+      z-index: 1000;
     }
 
     .nav a {
@@ -43,10 +47,17 @@
       color: yellow;
     }
 
-    /* MAIN BOX */
+    /* CARD BOX */
     .box {
-      margin-top: 120px;
-      padding: 20px;
+      margin-top: 130px;
+      padding: 25px;
+      background: rgba(0,0,0,0.3);
+      border-radius: 20px;
+      width: 90%;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
 
     img {
@@ -56,7 +67,8 @@
     }
 
     h1 {
-      font-size: 40px;
+      font-size: 38px;
+      text-shadow: 0 0 10px white, 0 0 20px #ff6a00;
     }
 
     p {
@@ -72,11 +84,16 @@
       font-size: 16px;
       background: white;
       color: #764ba2;
+      transition: 0.3s;
     }
 
     button:hover {
       background: black;
       color: white;
+    }
+
+    button:active {
+      transform: scale(0.95);
     }
 
     /* SECTIONS */
@@ -109,7 +126,7 @@
     <img src="https://i.imgur.com/4M34hi2.png">
 
     <h1>🔥 Hello Aayan</h1>
-    <p>My Ultimate Website is live 🚀</p>
+    <p>My Ultra Pro Website is live 🚀</p>
 
     <button onclick="alert('Welcome Aayan 😎🔥')">Click Me</button>
 
@@ -127,13 +144,13 @@
   <!-- ABOUT -->
   <div class="section" id="about">
     <h1>About Me 👤</h1>
-    <p>Hello! I'm Aayan. I love coding 💻 and making cool websites 🔥</p>
+    <p>I’m Aayan — learning coding and building awesome websites 💻🔥</p>
   </div>
 
   <!-- CONTACT -->
   <div class="section" id="contact">
     <h1>Contact Me 📞</h1>
-    <p>Click below to chat on WhatsApp 👇</p>
+    <p>Chat with me on WhatsApp 👇</p>
 
     <a href="https://wa.me/923001234567" target="_blank">
       <button>WhatsApp 💬</button>
@@ -142,7 +159,7 @@
 
   <!-- FOOTER -->
   <div class="footer">
-    Made by Aayan 💻🔥 | All Rights Reserved
+    Made by Aayan 💻🔥 | Ultra Pro Version
   </div>
 
 </body>
