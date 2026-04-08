@@ -78,7 +78,7 @@ canvas {
 
 <img src="profile.jpg" class="profile-img">
 
-<h1>😎 Fayaz Khan</h1>
+<h1 id="name"></h1>
 <p>🔥 Welcome to my official website</p>
 
 <a href="https://instagram.com/" target="_blank">
@@ -106,7 +106,26 @@ canvas {
 <!-- BACKGROUND -->
 <canvas id="bg"></canvas>
 
+<!-- MUSIC -->
+<audio autoplay loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
 <script>
+// TYPING EFFECT
+let text = "😎 Fayaz Khan";
+let i = 0;
+
+function typing() {
+  if (i < text.length) {
+    document.getElementById("name").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 100);
+  }
+}
+typing();
+
+// BACKGROUND PARTICLES
 const canvas = document.getElementById("bg");
 const ctx = canvas.getContext("2d");
 
