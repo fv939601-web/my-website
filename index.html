@@ -13,14 +13,6 @@ body {
   background:black;
 }
 
-/* NAV */
-.nav {
-  background:#00000090;
-  padding:15px;
-  position:sticky;
-  top:0;
-}
-
 /* PROFILE */
 .profile-img {
   width:150px;
@@ -32,12 +24,22 @@ body {
 
 /* BUTTON */
 button {
-  padding:10px 20px;
+  padding:12px 25px;
   border:none;
-  border-radius:20px;
+  border-radius:25px;
   margin:10px;
   cursor:pointer;
   font-size:16px;
+  font-weight:bold;
+  background:white;
+  color:black;
+  transition:0.3s;
+}
+
+button:hover {
+  background:orange;
+  color:white;
+  transform:scale(1.1);
 }
 
 /* SECTION */
@@ -54,7 +56,7 @@ button {
   color:white;
   padding:15px;
   border-radius:50%;
-  font-size:20px;
+  font-size:22px;
   text-decoration:none;
 }
 </style>
@@ -62,9 +64,7 @@ button {
 
 <body>
 
-<div class="nav">
-  <b>🔥 Fayaz Khan Website</b>
-</div>
+<h2>🔥 Fayaz Khan Website</h2>
 
 <!-- PROFILE -->
 <img src="profile.jpg" class="profile-img">
@@ -72,18 +72,18 @@ button {
 <h1>😎 Fayaz Khan</h1>
 <p>🔥 Welcome to my official website</p>
 
-<!-- SOCIAL BUTTONS -->
+<!-- BUTTONS -->
 <div class="section">
 
-<a href="https://www.instagram.com/invites/contact/?igsh=om55jy3ktmu3&utm_content=ft4nv6n">
+<a href="https://instagram.com/YOUR_USERNAME" target="_blank">
 <button>Instagram 😍</button>
 </a>
 
-<a href="https://www.tiktok.com/@real.cricket5091">
+<a href="https://tiktok.com/@YOUR_USERNAME" target="_blank">
 <button>TikTok 🎵</button>
 </a>
 
-<a href="https://wa.me/923410515357">
+<a href="https://wa.me/923410515357" target="_blank">
 <button>WhatsApp 💬</button>
 </a>
 
@@ -92,15 +92,12 @@ button {
 <!-- ABOUT -->
 <div class="section">
 <h2>😎 About Me</h2>
-<p>
-I am Fayaz Khan 👑 <br>
-I love cricket 🏏 and social media 📱 <br>
-Learning web development 💻🔥
-</p>
+<p>I am Fayaz Khan 👑<br>
+I love cricket 🏏 and social media 📱</p>
 </div>
 
-<!-- FLOAT BUTTON -->
-<a href="https://wa.me/923410515357" class="whatsapp">💬</a>
+<!-- FLOAT WHATSAPP -->
+<a href="https://wa.me/923410515357" class="whatsapp" target="_blank">💬</a>
 
 </body>
 </html>
