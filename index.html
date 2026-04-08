@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Fayaz Khan Ultra Pro</title>
+<title>Fayaz Khan Website</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
   margin:0;
-  font-family:Arial;
+  font-family: Arial;
   text-align:center;
   color:white;
   background:black;
@@ -34,12 +34,14 @@ button {
   background:white;
   color:black;
   transition:0.3s;
+  box-shadow: 0 0 10px white;
 }
 
 button:hover {
   background:orange;
   color:white;
   transform:scale(1.1);
+  box-shadow: 0 0 20px orange;
 }
 
 /* SECTION */
@@ -59,6 +61,14 @@ button:hover {
   font-size:22px;
   text-decoration:none;
 }
+
+/* CANVAS BG */
+canvas {
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+}
 </style>
 </head>
 
@@ -66,28 +76,25 @@ button:hover {
 
 <h2>🔥 Fayaz Khan Website</h2>
 
-<!-- PROFILE -->
 <img src="profile.jpg" class="profile-img">
 
 <h1>😎 Fayaz Khan</h1>
 <p>🔥 Welcome to my official website</p>
 
 <!-- BUTTONS -->
-<div>
-  <a href="https://instagram.com/" target="_blank">
-    <button>Instagram 😍</button>
-  </a>
+<a href="https://instagram.com/" target="_blank">
+  <button>Instagram 😍</button>
+</a>
 
-  <a href="https://tiktok.com/" target="_blank">
-    <button>TikTok 🎵</button>
-  </a>
-</div>
+<a href="https://tiktok.com/" target="_blank">
+  <button>TikTok 🎵</button>
+</a>
 
-<div>
-  <a href="https://wa.me/923410515357" target="_blank">
-    <button>WhatsApp 💬</button>
-  </a>
-</div>
+<br>
+
+<a href="https://wa.me/923410515357" target="_blank">
+  <button>WhatsApp 💬</button>
+</a>
 
 <!-- ABOUT -->
 <div class="section">
@@ -96,8 +103,47 @@ button:hover {
   <p>I love cricket 🏏 and social media 📱</p>
 </div>
 
-<!-- FLOAT WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/923410515357">💬</a>
+<!-- FLOAT BUTTON -->
+<a href="https://wa.me/923410515357" class="whatsapp">💬</a>
+
+<!-- BACKGROUND ANIMATION -->
+<canvas id="bg"></canvas>
+
+<script>
+const canvas = document.getElementById("bg");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for (let i = 0; i < 100; i++) {
+  particles.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 2
+  });
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "white";
+
+  particles.forEach(p => {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fill();
+
+    p.y += 0.5;
+    if (p.y > canvas.height) p.y = 0;
+  });
+
+  requestAnimationFrame(draw);
+}
+
+draw();
+</script>
 
 </body>
 </html>
