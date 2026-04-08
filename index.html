@@ -34,7 +34,7 @@ body {
   margin-top:30px;
 }
 
-/* NAME GLOW */
+/* NAME */
 #name {
   font-size:32px;
   text-shadow: 0 0 10px white, 0 0 20px orange, 0 0 30px orange;
@@ -62,15 +62,9 @@ button:hover {
   box-shadow: 0 0 20px orange;
 }
 
-/* REMOVE LINK STYLE */
-a {
-  text-decoration:none;
-}
+a { text-decoration:none; }
 
-/* SECTION */
-.section {
-  padding:30px;
-}
+.section { padding:30px; }
 
 /* WHATSAPP FLOAT */
 .whatsapp {
@@ -82,7 +76,6 @@ a {
   padding:15px;
   border-radius:50%;
   font-size:22px;
-  text-decoration:none;
 }
 
 /* BACKGROUND */
@@ -104,12 +97,12 @@ canvas {
 <h1 id="name"></h1>
 <p>🔥 Welcome to my official website</p>
 
-<!-- BUTTONS -->
-<a href="https://instagram.com/" target="_blank">
+<!-- BUTTONS (UPDATED LINKS) -->
+<a href="https://instagram.com/fayazkhan" target="_blank">
 <button>Instagram 😍</button>
 </a>
 
-<a href="https://tiktok.com/" target="_blank">
+<a href="https://tiktok.com/@fayazkhan" target="_blank">
 <button>TikTok 🎵</button>
 </a>
 
@@ -130,7 +123,7 @@ canvas {
 <p>I love cricket 🏏 and social media 📱</p>
 </div>
 
-<!-- FLOAT BUTTON -->
+<!-- FLOAT -->
 <a href="https://wa.me/923410515357" class="whatsapp">💬</a>
 
 <!-- AUDIO -->
@@ -138,17 +131,16 @@ canvas {
 <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
 </audio>
 
-<!-- CANVAS -->
 <canvas id="bg"></canvas>
 
 <script>
-// FADE IN
+// FADE
 window.onload = () => {
   document.body.style.transition = "1s";
   document.body.style.opacity = 1;
 };
 
-// TYPING EFFECT
+// TYPING
 let text = "😎 Fayaz Khan";
 let i = 0;
 
@@ -166,7 +158,7 @@ function playMusic() {
   document.getElementById("music").play();
 }
 
-// PARTICLES BACKGROUND
+// PARTICLES
 const canvas = document.getElementById("bg");
 const ctx = canvas.getContext("2d");
 
