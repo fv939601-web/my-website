@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Fayaz Khan Pro System</title>
+<title>Fayaz Khan Official</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
-  margin:0;
-  font-family: Arial;
-  text-align:center;
-  color:white;
-  background: linear-gradient(270deg,#667eea,#764ba2,#ff6a00);
-  background-size:600% 600%;
-  animation:bg 10s infinite;
+margin:0;
+font-family:Arial;
+color:white;
+text-align:center;
+background: linear-gradient(270deg, #ff6a00, #ee0979);
+background-size:400% 400%;
+animation:bg 10s ease infinite;
+transition:0.5s;
+}
+
+.dark {
+background:#111;
+color:#fff;
 }
 
 @keyframes bg {
@@ -21,107 +27,111 @@ body {
 100%{background-position:0%}
 }
 
-#loginBox {
-  margin-top:150px;
-}
-
-input {
-  padding:10px;
-  border:none;
-  border-radius:10px;
-  margin:5px;
-}
-
-button {
-  padding:10px 20px;
-  border:none;
-  border-radius:20px;
-  cursor:pointer;
-}
-
-#mainSite {
-  display:none;
-}
-
+/* NAV */
 .nav {
-  background:rgba(0,0,0,0.4);
-  padding:15px;
+background:#00000070;
+padding:15px;
+position:sticky;
+top:0;
 }
 
-.logout {
-  position:absolute;
-  right:10px;
-  top:10px;
+.nav a {
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
 }
 
+/* PROFILE */
+.profile img {
+width:140px;
+border-radius:50%;
+border:3px solid white;
+margin-top:30px;
+}
+
+/* BUTTON */
+button {
+padding:10px 20px;
+border:none;
+border-radius:20px;
+margin:10px;
+cursor:pointer;
+font-size:16px;
+transition:0.3s;
+}
+
+button:hover {
+transform:scale(1.1);
+}
+
+/* SECTION */
+.section {
+padding:40px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp {
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+}
 </style>
+
+<script>
+function toggleMode(){
+document.body.classList.toggle("dark");
+}
+</script>
+
 </head>
 
 <body>
 
-<!-- LOGIN -->
-<div id="loginBox">
-  <h2>Login 🔐</h2>
-  <input id="user" placeholder="Username"><br>
-  <input id="pass" type="password" placeholder="Password"><br>
-  <button onclick="login()">Login</button>
-</div>
-
-<!-- MAIN -->
-<div id="mainSite">
-
+<!-- NAVBAR -->
 <div class="nav">
-  Fayaz Khan Website 🔥
-  <button class="logout" onclick="logout()">Logout</button>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+<button onclick="toggleMode()">🌙</button>
 </div>
 
-<h1>Welcome Fayaz Khan 😎</h1>
-<p>🔥 Real System Activated</p>
+<!-- HOME -->
+<div class="profile">
+<img src="https://i.imgur.com/4M34h12.png">
+<h1>🔥 Fayaz Khan</h1>
+<p>😎 Welcome to my official website</p>
 
-<a href="https://www.instagram.com/johnson.lee.3367" target="_blank">
-<button>Instagram 😍</button>
-</a>
+<button onclick="window.open('https://www.instagram.com/invites/contact/?igsh=om55jy3ktmu3&utm_content=ft4nv6n')">Instagram 😍</button>
 
-<a href="https://www.tiktok.com/@real.cricket5091" target="_blank">
-<button>TikTok 🎵</button>
-</a>
+<button onclick="window.open('https://www.tiktok.com/@real.cricket5091')">TikTok 🎵</button>
 
-<a href="https://wa.me/923410515357" target="_blank">
-<button>WhatsApp 💬</button>
-</a>
-
+<button onclick="window.open('https://wa.me/923410515357')">WhatsApp 💬</button>
 </div>
 
-<script>
+<!-- ABOUT -->
+<div class="section" id="about">
+<h2>About Me 😎</h2>
+<p>I am Fayaz Khan 👑<br>
+I love cricket 🏏 and social media 📱<br>
+Learning web development 💻🔥</p>
+</div>
 
-// check login saved
-if(localStorage.getItem("login")=="yes"){
-  showSite();
-}
+<!-- CONTACT -->
+<div class="section" id="contact">
+<h2>Contact Me 📞</h2>
+<p>Click below to chat on WhatsApp 👇</p>
+<button onclick="window.open('https://wa.me/923410515357')">Chat Now 💬</button>
+</div>
 
-function login(){
-  let u=document.getElementById("user").value;
-  let p=document.getElementById("pass").value;
-
-  if(u=="fayaz" && p=="1234"){
-    localStorage.setItem("login","yes");
-    showSite();
-  } else {
-    alert("Wrong login ❌");
-  }
-}
-
-function showSite(){
-  document.getElementById("loginBox").style.display="none";
-  document.getElementById("mainSite").style.display="block";
-}
-
-function logout(){
-  localStorage.removeItem("login");
-  location.reload();
-}
-
-</script>
+<!-- FLOAT BUTTON -->
+<a class="whatsapp" href="https://wa.me/923410515357">💬</a>
 
 </body>
 </html>
