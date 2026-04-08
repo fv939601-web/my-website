@@ -11,6 +11,18 @@ body {
   text-align:center;
   color:white;
   background: radial-gradient(circle, #000000, #0f0f0f, #000000);
+  opacity:0;
+}
+
+/* TITLE ANIMATION */
+#title {
+  animation: colorChange 3s infinite;
+}
+
+@keyframes colorChange {
+  0% { color:white; }
+  50% { color:orange; }
+  100% { color:white; }
 }
 
 /* PROFILE */
@@ -22,7 +34,7 @@ body {
   margin-top:30px;
 }
 
-/* NAME */
+/* NAME GLOW */
 #name {
   font-size:32px;
   text-shadow: 0 0 10px white, 0 0 20px orange, 0 0 30px orange;
@@ -48,6 +60,11 @@ button:hover {
   color:white;
   transform:scale(1.1);
   box-shadow: 0 0 20px orange;
+}
+
+/* REMOVE LINK STYLE */
+a {
+  text-decoration:none;
 }
 
 /* SECTION */
@@ -80,7 +97,7 @@ canvas {
 
 <body>
 
-<h2>🔥 Fayaz Khan Website</h2>
+<h2 id="title">🔥 Fayaz Khan Website</h2>
 
 <img src="profile.jpg" class="profile-img">
 
@@ -113,7 +130,7 @@ canvas {
 <p>I love cricket 🏏 and social media 📱</p>
 </div>
 
-<!-- FLOAT -->
+<!-- FLOAT BUTTON -->
 <a href="https://wa.me/923410515357" class="whatsapp">💬</a>
 
 <!-- AUDIO -->
@@ -125,7 +142,13 @@ canvas {
 <canvas id="bg"></canvas>
 
 <script>
-// typing
+// FADE IN
+window.onload = () => {
+  document.body.style.transition = "1s";
+  document.body.style.opacity = 1;
+};
+
+// TYPING EFFECT
 let text = "😎 Fayaz Khan";
 let i = 0;
 
@@ -138,12 +161,12 @@ function typing() {
 }
 typing();
 
-// music
+// MUSIC
 function playMusic() {
   document.getElementById("music").play();
 }
 
-// background particles
+// PARTICLES BACKGROUND
 const canvas = document.getElementById("bg");
 const ctx = canvas.getContext("2d");
 
